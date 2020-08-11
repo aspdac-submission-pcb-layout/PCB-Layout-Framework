@@ -1,0 +1,299 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API for Router &#8212; PCB-Layout-Framework  documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="API for Placer" href="placer.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="api-for-router">
+<h1>API for Router<a class="headerlink" href="#api-for-router" title="Permalink to this headline">¶</a></h1>
+<dl class="cpp class">
+<dt id="_CPPv415GridBasedRouter">
+<span id="_CPPv315GridBasedRouter"></span><span id="_CPPv215GridBasedRouter"></span><span id="GridBasedRouter"></span><em class="property">class </em><code class="sig-name descname">GridBasedRouter</code><a class="headerlink" href="#_CPPv415GridBasedRouter" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<p>This is the router class. You need an instance of this class to do routing.</p>
+<dl class="cpp function">
+<dt id="_CPPv4N15GridBasedRouter15GridBasedRouterER16kicadPcbDataBase">
+<span id="_CPPv3N15GridBasedRouter15GridBasedRouterER16kicadPcbDataBase"></span><span id="_CPPv2N15GridBasedRouter15GridBasedRouterER16kicadPcbDataBase"></span><span id="GridBasedRouter::GridBasedRouter__kicadPcbDataBaseR"></span><code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv4N15GridBasedRouter15GridBasedRouterER16kicadPcbDataBase" title="GridBasedRouter::GridBasedRouter">GridBasedRouter</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">GridBasedRouter</code><span class="sig-paren">(</span><a class="reference internal" href="database.html#_CPPv416kicadPcbDataBase" title="kicadPcbDataBase">kicadPcbDataBase</a> &amp;<em>db</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15GridBasedRouter15GridBasedRouterER16kicadPcbDataBase" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N15GridBasedRouter14initializationEv">
+<span id="_CPPv3N15GridBasedRouter14initializationEv"></span><span id="_CPPv2N15GridBasedRouter14initializationEv"></span><span id="GridBasedRouter::initialization"></span>void <code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv415GridBasedRouter" title="GridBasedRouter">GridBasedRouter</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">initialization</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15GridBasedRouter14initializationEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><code class="xref py py-func docutils literal notranslate"><span class="pre">initialization()</span></code> must be called before <code class="xref py py-func docutils literal notranslate"><span class="pre">route()</span></code>.
+Set routing parameters and options before calling this function.</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N15GridBasedRouter5routeEv">
+<span id="_CPPv3N15GridBasedRouter5routeEv"></span><span id="_CPPv2N15GridBasedRouter5routeEv"></span><span id="GridBasedRouter::route"></span>void <code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv415GridBasedRouter" title="GridBasedRouter">GridBasedRouter</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">route</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15GridBasedRouter5routeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Initiates an autorouting job.</p>
+</dd></dl>
+
+<div class="section" id="setters">
+<h2>Setters<a class="headerlink" href="#setters" title="Permalink to this headline">¶</a></h2>
+<dl class="cpp function">
+<dt id="_CPPv4N15GridBasedRouter14set_grid_scaleEKi">
+<span id="_CPPv3N15GridBasedRouter14set_grid_scaleEKi"></span><span id="_CPPv2N15GridBasedRouter14set_grid_scaleEKi"></span><span id="GridBasedRouter::set_grid_scale__iC"></span>void <code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv415GridBasedRouter" title="GridBasedRouter">GridBasedRouter</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">set_grid_scale</code><span class="sig-paren">(</span><em class="property">const</em> int <em>_iS</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15GridBasedRouter14set_grid_scaleEKi" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N15GridBasedRouter18set_num_iterationsEKi">
+<span id="_CPPv3N15GridBasedRouter18set_num_iterationsEKi"></span><span id="_CPPv2N15GridBasedRouter18set_num_iterationsEKi"></span><span id="GridBasedRouter::set_num_iterations__iC"></span>void <code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv415GridBasedRouter" title="GridBasedRouter">GridBasedRouter</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">set_num_iterations</code><span class="sig-paren">(</span><em class="property">const</em> int <em>_numRRI</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15GridBasedRouter18set_num_iterationsEKi" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N15GridBasedRouter20set_enlarge_boundaryEKi">
+<span id="_CPPv3N15GridBasedRouter20set_enlarge_boundaryEKi"></span><span id="_CPPv2N15GridBasedRouter20set_enlarge_boundaryEKi"></span><span id="GridBasedRouter::set_enlarge_boundary__iC"></span>void <code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv415GridBasedRouter" title="GridBasedRouter">GridBasedRouter</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">set_enlarge_boundary</code><span class="sig-paren">(</span><em class="property">const</em> int <em>_eB</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15GridBasedRouter20set_enlarge_boundaryEKi" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N15GridBasedRouter21set_wirelength_weightEKd">
+<span id="_CPPv3N15GridBasedRouter21set_wirelength_weightEKd"></span><span id="_CPPv2N15GridBasedRouter21set_wirelength_weightEKd"></span><span id="GridBasedRouter::set_wirelength_weight__doubleC"></span>void <code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv415GridBasedRouter" title="GridBasedRouter">GridBasedRouter</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">set_wirelength_weight</code><span class="sig-paren">(</span><em class="property">const</em> double <em>_ww</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15GridBasedRouter21set_wirelength_weightEKd" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N15GridBasedRouter30set_diagonal_wirelength_weightEKd">
+<span id="_CPPv3N15GridBasedRouter30set_diagonal_wirelength_weightEKd"></span><span id="_CPPv2N15GridBasedRouter30set_diagonal_wirelength_weightEKd"></span><span id="GridBasedRouter::set_diagonal_wirelength_weight__doubleC"></span>void <code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv415GridBasedRouter" title="GridBasedRouter">GridBasedRouter</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">set_diagonal_wirelength_weight</code><span class="sig-paren">(</span><em class="property">const</em> double <em>_dww</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15GridBasedRouter30set_diagonal_wirelength_weightEKd" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N15GridBasedRouter23set_layer_change_weightEKd">
+<span id="_CPPv3N15GridBasedRouter23set_layer_change_weightEKd"></span><span id="_CPPv2N15GridBasedRouter23set_layer_change_weightEKd"></span><span id="GridBasedRouter::set_layer_change_weight__doubleC"></span>void <code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv415GridBasedRouter" title="GridBasedRouter">GridBasedRouter</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">set_layer_change_weight</code><span class="sig-paren">(</span><em class="property">const</em> double <em>_lCC</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15GridBasedRouter23set_layer_change_weightEKd" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N15GridBasedRouter25set_track_obstacle_weightEKd">
+<span id="_CPPv3N15GridBasedRouter25set_track_obstacle_weightEKd"></span><span id="_CPPv2N15GridBasedRouter25set_track_obstacle_weightEKd"></span><span id="GridBasedRouter::set_track_obstacle_weight__doubleC"></span>void <code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv415GridBasedRouter" title="GridBasedRouter">GridBasedRouter</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">set_track_obstacle_weight</code><span class="sig-paren">(</span><em class="property">const</em> double <em>_toc</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15GridBasedRouter25set_track_obstacle_weightEKd" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N15GridBasedRouter23set_via_obstacle_weightEKd">
+<span id="_CPPv3N15GridBasedRouter23set_via_obstacle_weightEKd"></span><span id="_CPPv2N15GridBasedRouter23set_via_obstacle_weightEKd"></span><span id="GridBasedRouter::set_via_obstacle_weight__doubleC"></span>void <code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv415GridBasedRouter" title="GridBasedRouter">GridBasedRouter</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">set_via_obstacle_weight</code><span class="sig-paren">(</span><em class="property">const</em> double <em>_voc</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15GridBasedRouter23set_via_obstacle_weightEKd" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N15GridBasedRouter23set_pad_obstacle_weightEKd">
+<span id="_CPPv3N15GridBasedRouter23set_pad_obstacle_weightEKd"></span><span id="_CPPv2N15GridBasedRouter23set_pad_obstacle_weightEKd"></span><span id="GridBasedRouter::set_pad_obstacle_weight__doubleC"></span>void <code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv415GridBasedRouter" title="GridBasedRouter">GridBasedRouter</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">set_pad_obstacle_weight</code><span class="sig-paren">(</span><em class="property">const</em> double <em>_poc</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15GridBasedRouter23set_pad_obstacle_weightEKd" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N15GridBasedRouter28set_track_obstacle_step_sizeEKd">
+<span id="_CPPv3N15GridBasedRouter28set_track_obstacle_step_sizeEKd"></span><span id="_CPPv2N15GridBasedRouter28set_track_obstacle_step_sizeEKd"></span><span id="GridBasedRouter::set_track_obstacle_step_size__doubleC"></span>void <code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv415GridBasedRouter" title="GridBasedRouter">GridBasedRouter</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">set_track_obstacle_step_size</code><span class="sig-paren">(</span><em class="property">const</em> double <em>_tocss</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15GridBasedRouter28set_track_obstacle_step_sizeEKd" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N15GridBasedRouter26set_via_obstacle_step_sizeEKd">
+<span id="_CPPv3N15GridBasedRouter26set_via_obstacle_step_sizeEKd"></span><span id="_CPPv2N15GridBasedRouter26set_via_obstacle_step_sizeEKd"></span><span id="GridBasedRouter::set_via_obstacle_step_size__doubleC"></span>void <code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv415GridBasedRouter" title="GridBasedRouter">GridBasedRouter</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">set_via_obstacle_step_size</code><span class="sig-paren">(</span><em class="property">const</em> double <em>_vocss</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15GridBasedRouter26set_via_obstacle_step_sizeEKd" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N15GridBasedRouter25set_net_layer_pref_weightEKiRKNSt6stringEKi">
+<span id="_CPPv3N15GridBasedRouter25set_net_layer_pref_weightEKiRKNSt6stringEKi"></span><span id="_CPPv2N15GridBasedRouter25set_net_layer_pref_weightEKiRKNSt6stringEKi"></span><span id="GridBasedRouter::set_net_layer_pref_weight__iC.ssCR.iC"></span>void <code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv415GridBasedRouter" title="GridBasedRouter">GridBasedRouter</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">set_net_layer_pref_weight</code><span class="sig-paren">(</span><em class="property">const</em> int <em>_netId</em>, <em class="property">const</em> std::string &amp;<em>_layerName</em>, <em class="property">const</em> int <em>_weight</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15GridBasedRouter25set_net_layer_pref_weightEKiRKNSt6stringEKi" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N15GridBasedRouter31set_net_all_layers_pref_weightsEKiKi">
+<span id="_CPPv3N15GridBasedRouter31set_net_all_layers_pref_weightsEKiKi"></span><span id="_CPPv2N15GridBasedRouter31set_net_all_layers_pref_weightsEKiKi"></span><span id="GridBasedRouter::set_net_all_layers_pref_weights__iC.iC"></span>void <code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv415GridBasedRouter" title="GridBasedRouter">GridBasedRouter</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">set_net_all_layers_pref_weights</code><span class="sig-paren">(</span><em class="property">const</em> int <em>_netId</em>, <em class="property">const</em> int <em>_weight</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15GridBasedRouter31set_net_all_layers_pref_weightsEKiKi" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="getters">
+<h2>Getters<a class="headerlink" href="#getters" title="Permalink to this headline">¶</a></h2>
+<dl class="cpp function">
+<dt id="_CPPv4N15GridBasedRouter14get_grid_scaleEv">
+<span id="_CPPv3N15GridBasedRouter14get_grid_scaleEv"></span><span id="_CPPv2N15GridBasedRouter14get_grid_scaleEv"></span><span id="GridBasedRouter::get_grid_scale"></span>unsigned int <code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv415GridBasedRouter" title="GridBasedRouter">GridBasedRouter</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">get_grid_scale</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15GridBasedRouter14get_grid_scaleEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N15GridBasedRouter18get_num_iterationsEv">
+<span id="_CPPv3N15GridBasedRouter18get_num_iterationsEv"></span><span id="_CPPv2N15GridBasedRouter18get_num_iterationsEv"></span><span id="GridBasedRouter::get_num_iterations"></span>unsigned int <code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv415GridBasedRouter" title="GridBasedRouter">GridBasedRouter</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">get_num_iterations</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15GridBasedRouter18get_num_iterationsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N15GridBasedRouter20get_enlarge_boundaryEv">
+<span id="_CPPv3N15GridBasedRouter20get_enlarge_boundaryEv"></span><span id="_CPPv2N15GridBasedRouter20get_enlarge_boundaryEv"></span><span id="GridBasedRouter::get_enlarge_boundary"></span>unsigned int <code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv415GridBasedRouter" title="GridBasedRouter">GridBasedRouter</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">get_enlarge_boundary</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15GridBasedRouter20get_enlarge_boundaryEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N15GridBasedRouter21get_wirelength_weightEv">
+<span id="_CPPv3N15GridBasedRouter21get_wirelength_weightEv"></span><span id="_CPPv2N15GridBasedRouter21get_wirelength_weightEv"></span><span id="GridBasedRouter::get_wirelength_weight"></span>double <code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv415GridBasedRouter" title="GridBasedRouter">GridBasedRouter</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">get_wirelength_weight</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15GridBasedRouter21get_wirelength_weightEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N15GridBasedRouter30get_diagonal_wirelength_weightEv">
+<span id="_CPPv3N15GridBasedRouter30get_diagonal_wirelength_weightEv"></span><span id="_CPPv2N15GridBasedRouter30get_diagonal_wirelength_weightEv"></span><span id="GridBasedRouter::get_diagonal_wirelength_weight"></span>double <code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv415GridBasedRouter" title="GridBasedRouter">GridBasedRouter</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">get_diagonal_wirelength_weight</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15GridBasedRouter30get_diagonal_wirelength_weightEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N15GridBasedRouter23get_layer_change_weightEv">
+<span id="_CPPv3N15GridBasedRouter23get_layer_change_weightEv"></span><span id="_CPPv2N15GridBasedRouter23get_layer_change_weightEv"></span><span id="GridBasedRouter::get_layer_change_weight"></span>double <code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv415GridBasedRouter" title="GridBasedRouter">GridBasedRouter</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">get_layer_change_weight</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15GridBasedRouter23get_layer_change_weightEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N15GridBasedRouter25get_track_obstacle_weightEv">
+<span id="_CPPv3N15GridBasedRouter25get_track_obstacle_weightEv"></span><span id="_CPPv2N15GridBasedRouter25get_track_obstacle_weightEv"></span><span id="GridBasedRouter::get_track_obstacle_weight"></span>double <code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv415GridBasedRouter" title="GridBasedRouter">GridBasedRouter</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">get_track_obstacle_weight</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15GridBasedRouter25get_track_obstacle_weightEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N15GridBasedRouter23get_via_obstacle_weightEv">
+<span id="_CPPv3N15GridBasedRouter23get_via_obstacle_weightEv"></span><span id="_CPPv2N15GridBasedRouter23get_via_obstacle_weightEv"></span><span id="GridBasedRouter::get_via_obstacle_weight"></span>double <code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv415GridBasedRouter" title="GridBasedRouter">GridBasedRouter</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">get_via_obstacle_weight</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15GridBasedRouter23get_via_obstacle_weightEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N15GridBasedRouter23get_pad_obstacle_weightEv">
+<span id="_CPPv3N15GridBasedRouter23get_pad_obstacle_weightEv"></span><span id="_CPPv2N15GridBasedRouter23get_pad_obstacle_weightEv"></span><span id="GridBasedRouter::get_pad_obstacle_weight"></span>double <code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv415GridBasedRouter" title="GridBasedRouter">GridBasedRouter</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">get_pad_obstacle_weight</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15GridBasedRouter23get_pad_obstacle_weightEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N15GridBasedRouter28get_track_obstacle_step_sizeEv">
+<span id="_CPPv3N15GridBasedRouter28get_track_obstacle_step_sizeEv"></span><span id="_CPPv2N15GridBasedRouter28get_track_obstacle_step_sizeEv"></span><span id="GridBasedRouter::get_track_obstacle_step_size"></span>double <code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv415GridBasedRouter" title="GridBasedRouter">GridBasedRouter</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">get_track_obstacle_step_size</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15GridBasedRouter28get_track_obstacle_step_sizeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N15GridBasedRouter26get_via_obstacle_step_sizeEv">
+<span id="_CPPv3N15GridBasedRouter26get_via_obstacle_step_sizeEv"></span><span id="_CPPv2N15GridBasedRouter26get_via_obstacle_step_sizeEv"></span><span id="GridBasedRouter::get_via_obstacle_step_size"></span>double <code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv415GridBasedRouter" title="GridBasedRouter">GridBasedRouter</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">get_via_obstacle_step_size</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15GridBasedRouter26get_via_obstacle_step_sizeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N15GridBasedRouter14get_total_costEv">
+<span id="_CPPv3N15GridBasedRouter14get_total_costEv"></span><span id="_CPPv2N15GridBasedRouter14get_total_costEv"></span><span id="GridBasedRouter::get_total_cost"></span>double <code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv415GridBasedRouter" title="GridBasedRouter">GridBasedRouter</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">get_total_cost</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15GridBasedRouter14get_total_costEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N15GridBasedRouter21get_routed_wirelengthEv">
+<span id="_CPPv3N15GridBasedRouter21get_routed_wirelengthEv"></span><span id="_CPPv2N15GridBasedRouter21get_routed_wirelengthEv"></span><span id="GridBasedRouter::get_routed_wirelength"></span>double <code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv415GridBasedRouter" title="GridBasedRouter">GridBasedRouter</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">get_routed_wirelength</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15GridBasedRouter21get_routed_wirelengthEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N15GridBasedRouter21get_routed_wirelengthERNSt6vectorI13MultipinRouteEE">
+<span id="_CPPv3N15GridBasedRouter21get_routed_wirelengthERNSt6vectorI13MultipinRouteEE"></span><span id="_CPPv2N15GridBasedRouter21get_routed_wirelengthERNSt6vectorI13MultipinRouteEE"></span><span id="GridBasedRouter::get_routed_wirelength__std::vector:MultipinRoute:R"></span>double <code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv415GridBasedRouter" title="GridBasedRouter">GridBasedRouter</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">get_routed_wirelength</code><span class="sig-paren">(</span>std::vector&lt;MultipinRoute&gt; &amp;<em>mpr</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15GridBasedRouter21get_routed_wirelengthERNSt6vectorI13MultipinRouteEE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N15GridBasedRouter19get_routed_num_viasEv">
+<span id="_CPPv3N15GridBasedRouter19get_routed_num_viasEv"></span><span id="_CPPv2N15GridBasedRouter19get_routed_num_viasEv"></span><span id="GridBasedRouter::get_routed_num_vias"></span>int <code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv415GridBasedRouter" title="GridBasedRouter">GridBasedRouter</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">get_routed_num_vias</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15GridBasedRouter19get_routed_num_viasEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N15GridBasedRouter19get_routed_num_viasERNSt6vectorI13MultipinRouteEE">
+<span id="_CPPv3N15GridBasedRouter19get_routed_num_viasERNSt6vectorI13MultipinRouteEE"></span><span id="_CPPv2N15GridBasedRouter19get_routed_num_viasERNSt6vectorI13MultipinRouteEE"></span><span id="GridBasedRouter::get_routed_num_vias__std::vector:MultipinRoute:R"></span>int <code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv415GridBasedRouter" title="GridBasedRouter">GridBasedRouter</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">get_routed_num_vias</code><span class="sig-paren">(</span>std::vector&lt;MultipinRoute&gt; &amp;<em>mpr</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15GridBasedRouter19get_routed_num_viasERNSt6vectorI13MultipinRouteEE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N15GridBasedRouter20get_routed_num_bendsEv">
+<span id="_CPPv3N15GridBasedRouter20get_routed_num_bendsEv"></span><span id="_CPPv2N15GridBasedRouter20get_routed_num_bendsEv"></span><span id="GridBasedRouter::get_routed_num_bends"></span>int <code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv415GridBasedRouter" title="GridBasedRouter">GridBasedRouter</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">get_routed_num_bends</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15GridBasedRouter20get_routed_num_bendsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N15GridBasedRouter20get_routed_num_bendsERNSt6vectorI13MultipinRouteEE">
+<span id="_CPPv3N15GridBasedRouter20get_routed_num_bendsERNSt6vectorI13MultipinRouteEE"></span><span id="_CPPv2N15GridBasedRouter20get_routed_num_bendsERNSt6vectorI13MultipinRouteEE"></span><span id="GridBasedRouter::get_routed_num_bends__std::vector:MultipinRoute:R"></span>int <code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv415GridBasedRouter" title="GridBasedRouter">GridBasedRouter</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">get_routed_num_bends</code><span class="sig-paren">(</span>std::vector&lt;MultipinRoute&gt; &amp;<em>mpr</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15GridBasedRouter20get_routed_num_bendsERNSt6vectorI13MultipinRouteEE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">PCB-Layout-Framework</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="database.html">API for Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="placer.html">API for Placer</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">API for Router</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#setters">Setters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#getters">Getters</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="placer.html" title="previous chapter">API for Placer</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, [blinded for review].
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.1.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/router.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

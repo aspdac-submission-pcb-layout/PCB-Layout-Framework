@@ -1,0 +1,427 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API for Database &#8212; PCB-Layout-Framework  documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="API for Placer" href="placer.html" />
+    <link rel="prev" title="Quick Start" href="quickstart.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="api-for-database">
+<h1>API for Database<a class="headerlink" href="#api-for-database" title="Permalink to this headline">¶</a></h1>
+<dl class="cpp class">
+<dt id="_CPPv416kicadPcbDataBase">
+<span id="_CPPv316kicadPcbDataBase"></span><span id="_CPPv216kicadPcbDataBase"></span><span id="kicadPcbDataBase"></span><em class="property">class </em><code class="sig-name descname">kicadPcbDataBase</code><a class="headerlink" href="#_CPPv416kicadPcbDataBase" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N16kicadPcbDataBase16kicadPcbDataBaseENSt6stringE">
+<span id="_CPPv3N16kicadPcbDataBase16kicadPcbDataBaseENSt6stringE"></span><span id="_CPPv2N16kicadPcbDataBase16kicadPcbDataBaseENSt6stringE"></span><span id="kicadPcbDataBase::kicadPcbDataBase__ss"></span><code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv4N16kicadPcbDataBase16kicadPcbDataBaseENSt6stringE" title="kicadPcbDataBase::kicadPcbDataBase">kicadPcbDataBase</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">kicadPcbDataBase</code><span class="sig-paren">(</span>std::string <em>fileName</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16kicadPcbDataBase16kicadPcbDataBaseENSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The main database class for a design. The fileName parameter should be the filename of a .kicad_pcb file.</p>
+</dd></dl>
+
+<div class="section" id="initialization">
+<h2>Initialization<a class="headerlink" href="#initialization" title="Permalink to this headline">¶</a></h2>
+<dl class="cpp function">
+<dt id="_CPPv4N16kicadPcbDataBase13buildKicadPcbEv">
+<span id="_CPPv3N16kicadPcbDataBase13buildKicadPcbEv"></span><span id="_CPPv2N16kicadPcbDataBase13buildKicadPcbEv"></span><span id="kicadPcbDataBase::buildKicadPcb"></span>bool <code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv416kicadPcbDataBase" title="kicadPcbDataBase">kicadPcbDataBase</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">buildKicadPcb</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16kicadPcbDataBase13buildKicadPcbEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N16kicadPcbDataBase27removeRoutedSegmentsAndViasEv">
+<span id="_CPPv3N16kicadPcbDataBase27removeRoutedSegmentsAndViasEv"></span><span id="_CPPv2N16kicadPcbDataBase27removeRoutedSegmentsAndViasEv"></span><span id="kicadPcbDataBase::removeRoutedSegmentsAndVias"></span>void <code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv416kicadPcbDataBase" title="kicadPcbDataBase">kicadPcbDataBase</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">removeRoutedSegmentsAndVias</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16kicadPcbDataBase27removeRoutedSegmentsAndViasEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<p>Removes all routing, in preparation for autorouting.</p>
+</div>
+<div class="section" id="print-helpers">
+<h2>Print Helpers<a class="headerlink" href="#print-helpers" title="Permalink to this headline">¶</a></h2>
+<p>These functions print information to stdout to aid in logging, reporting, and debugging.</p>
+<dl class="cpp function">
+<dt id="_CPPv4N16kicadPcbDataBase10printLayerEv">
+<span id="_CPPv3N16kicadPcbDataBase10printLayerEv"></span><span id="_CPPv2N16kicadPcbDataBase10printLayerEv"></span><span id="kicadPcbDataBase::printLayer"></span>void <code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv416kicadPcbDataBase" title="kicadPcbDataBase">kicadPcbDataBase</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">printLayer</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16kicadPcbDataBase10printLayerEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N16kicadPcbDataBase8printNetEv">
+<span id="_CPPv3N16kicadPcbDataBase8printNetEv"></span><span id="_CPPv2N16kicadPcbDataBase8printNetEv"></span><span id="kicadPcbDataBase::printNet"></span>void <code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv416kicadPcbDataBase" title="kicadPcbDataBase">kicadPcbDataBase</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">printNet</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16kicadPcbDataBase8printNetEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N16kicadPcbDataBase9printInstEv">
+<span id="_CPPv3N16kicadPcbDataBase9printInstEv"></span><span id="_CPPv2N16kicadPcbDataBase9printInstEv"></span><span id="kicadPcbDataBase::printInst"></span>void <code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv416kicadPcbDataBase" title="kicadPcbDataBase">kicadPcbDataBase</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">printInst</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16kicadPcbDataBase9printInstEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N16kicadPcbDataBase9printCompEv">
+<span id="_CPPv3N16kicadPcbDataBase9printCompEv"></span><span id="_CPPv2N16kicadPcbDataBase9printCompEv"></span><span id="kicadPcbDataBase::printComp"></span>void <code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv416kicadPcbDataBase" title="kicadPcbDataBase">kicadPcbDataBase</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">printComp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16kicadPcbDataBase9printCompEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N16kicadPcbDataBase13printNetclassEv">
+<span id="_CPPv3N16kicadPcbDataBase13printNetclassEv"></span><span id="_CPPv2N16kicadPcbDataBase13printNetclassEv"></span><span id="kicadPcbDataBase::printNetclass"></span>void <code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv416kicadPcbDataBase" title="kicadPcbDataBase">kicadPcbDataBase</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">printNetclass</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16kicadPcbDataBase13printNetclassEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N16kicadPcbDataBase18printPcbRouterInfoEv">
+<span id="_CPPv3N16kicadPcbDataBase18printPcbRouterInfoEv"></span><span id="_CPPv2N16kicadPcbDataBase18printPcbRouterInfoEv"></span><span id="kicadPcbDataBase::printPcbRouterInfo"></span>void <code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv416kicadPcbDataBase" title="kicadPcbDataBase">kicadPcbDataBase</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">printPcbRouterInfo</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16kicadPcbDataBase18printPcbRouterInfoEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N16kicadPcbDataBase9printFileEv">
+<span id="_CPPv3N16kicadPcbDataBase9printFileEv"></span><span id="_CPPv2N16kicadPcbDataBase9printFileEv"></span><span id="kicadPcbDataBase::printFile"></span>void <code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv416kicadPcbDataBase" title="kicadPcbDataBase">kicadPcbDataBase</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">printFile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16kicadPcbDataBase9printFileEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N16kicadPcbDataBase12printSegmentEv">
+<span id="_CPPv3N16kicadPcbDataBase12printSegmentEv"></span><span id="_CPPv2N16kicadPcbDataBase12printSegmentEv"></span><span id="kicadPcbDataBase::printSegment"></span>void <code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv416kicadPcbDataBase" title="kicadPcbDataBase">kicadPcbDataBase</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">printSegment</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16kicadPcbDataBase12printSegmentEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N16kicadPcbDataBase20printUnconnectedPinsEv">
+<span id="_CPPv3N16kicadPcbDataBase20printUnconnectedPinsEv"></span><span id="_CPPv2N16kicadPcbDataBase20printUnconnectedPinsEv"></span><span id="kicadPcbDataBase::printUnconnectedPins"></span>void <code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv416kicadPcbDataBase" title="kicadPcbDataBase">kicadPcbDataBase</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">printUnconnectedPins</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16kicadPcbDataBase20printUnconnectedPinsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N16kicadPcbDataBase10printKiCadEKNSt6stringEKNSt6stringEKNSt6stringEKb">
+<span id="_CPPv3N16kicadPcbDataBase10printKiCadEKNSt6stringEKNSt6stringEKNSt6stringEKb"></span><span id="_CPPv2N16kicadPcbDataBase10printKiCadEKNSt6stringEKNSt6stringEKNSt6stringEKb"></span><span id="kicadPcbDataBase::printKiCad__ssC.ssC.ssC.bC"></span>void <code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv416kicadPcbDataBase" title="kicadPcbDataBase">kicadPcbDataBase</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">printKiCad</code><span class="sig-paren">(</span><em class="property">const</em> std::string <em>folderName</em> = &quot;&quot;, <em class="property">const</em> std::string <em>fileNameStamp</em> = &quot;&quot;, <em class="property">const</em> std::string <em>fileName</em> = &quot;&quot;, <em class="property">const</em> bool <em>verbose</em> = false<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16kicadPcbDataBase10printKiCadEKNSt6stringEKNSt6stringEKNSt6stringEKb" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N16kicadPcbDataBase10printNodesEv">
+<span id="_CPPv3N16kicadPcbDataBase10printNodesEv"></span><span id="_CPPv2N16kicadPcbDataBase10printNodesEv"></span><span id="kicadPcbDataBase::printNodes"></span>void <code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv416kicadPcbDataBase" title="kicadPcbDataBase">kicadPcbDataBase</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">printNodes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16kicadPcbDataBase10printNodesEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N16kicadPcbDataBase15printLockedInstEv">
+<span id="_CPPv3N16kicadPcbDataBase15printLockedInstEv"></span><span id="_CPPv2N16kicadPcbDataBase15printLockedInstEv"></span><span id="kicadPcbDataBase::printLockedInst"></span>void <code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv416kicadPcbDataBase" title="kicadPcbDataBase">kicadPcbDataBase</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">printLockedInst</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16kicadPcbDataBase15printLockedInstEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N16kicadPcbDataBase21printDesignStatisticsEv">
+<span id="_CPPv3N16kicadPcbDataBase21printDesignStatisticsEv"></span><span id="_CPPv2N16kicadPcbDataBase21printDesignStatisticsEv"></span><span id="kicadPcbDataBase::printDesignStatistics"></span>void <code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv416kicadPcbDataBase" title="kicadPcbDataBase">kicadPcbDataBase</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">printDesignStatistics</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16kicadPcbDataBase21printDesignStatisticsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N16kicadPcbDataBase31printRoutedSegmentsWLAndNumViasEv">
+<span id="_CPPv3N16kicadPcbDataBase31printRoutedSegmentsWLAndNumViasEv"></span><span id="_CPPv2N16kicadPcbDataBase31printRoutedSegmentsWLAndNumViasEv"></span><span id="kicadPcbDataBase::printRoutedSegmentsWLAndNumVias"></span>void <code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv416kicadPcbDataBase" title="kicadPcbDataBase">kicadPcbDataBase</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">printRoutedSegmentsWLAndNumVias</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16kicadPcbDataBase31printRoutedSegmentsWLAndNumViasEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="getters">
+<h2>Getters<a class="headerlink" href="#getters" title="Permalink to this headline">¶</a></h2>
+<dl class="cpp function">
+<dt id="_CPPv426getBoardBoundaryByEdgeCutsRdRdRdRd">
+<span id="_CPPv326getBoardBoundaryByEdgeCutsRdRdRdRd"></span><span id="_CPPv226getBoardBoundaryByEdgeCutsRdRdRdRd"></span><span id="getBoardBoundaryByEdgeCuts__doubleR.doubleR.doubleR.doubleR"></span>void <code class="sig-name descname">getBoardBoundaryByEdgeCuts</code><span class="sig-paren">(</span>double &amp;<em>minX</em>, double &amp;<em>maxX</em>, double &amp;<em>minY</em>, double &amp;<em>maxY</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv426getBoardBoundaryByEdgeCutsRdRdRdRd" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Gets the board boundary using the Edge.Cuts layer. This is the prefered method over <code class="xref py py-func docutils literal notranslate"><span class="pre">getBoardBoundaryByPinLocation()</span></code>.</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv429getBoardBoundaryByPinLocationRdRdRdRd">
+<span id="_CPPv329getBoardBoundaryByPinLocationRdRdRdRd"></span><span id="_CPPv229getBoardBoundaryByPinLocationRdRdRdRd"></span><span id="getBoardBoundaryByPinLocation__doubleR.doubleR.doubleR.doubleR"></span>void <code class="sig-name descname">getBoardBoundaryByPinLocation</code><span class="sig-paren">(</span>double &amp;<em>minX</em>, double &amp;<em>maxX</em>, double &amp;<em>minY</em>, double &amp;<em>maxY</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv429getBoardBoundaryByPinLocationRdRdRdRd" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Gets the board boundary using the pins locations. Using Edge.Cuts is prefered (<code class="xref py py-func docutils literal notranslate"><span class="pre">getBoardBoundaryByEdgeCuts()</span></code>).</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N16kicadPcbDataBase16getPcbRouterInfoEPNSt6vectorINSt3setINSt4pairIddEEEEEE">
+<span id="_CPPv3N16kicadPcbDataBase16getPcbRouterInfoEPNSt6vectorINSt3setINSt4pairIddEEEEEE"></span><span id="_CPPv2N16kicadPcbDataBase16getPcbRouterInfoEPNSt6vectorINSt3setINSt4pairIddEEEEEE"></span><span id="kicadPcbDataBase::getPcbRouterInfo__std::vector:std::set:std::pair:double.double:::P"></span>bool <code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv416kicadPcbDataBase" title="kicadPcbDataBase">kicadPcbDataBase</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">getPcbRouterInfo</code><span class="sig-paren">(</span>std::vector&lt;std::set&lt;std::pair&lt;double, double&gt;&gt;&gt;*<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16kicadPcbDataBase16getPcbRouterInfoEPNSt6vectorINSt3setINSt4pairIddEEEEEE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N16kicadPcbDataBase14getPinPositionERKNSt6stringERKNSt6stringEP8point_2d">
+<span id="_CPPv3N16kicadPcbDataBase14getPinPositionERKNSt6stringERKNSt6stringEP8point_2d"></span><span id="_CPPv2N16kicadPcbDataBase14getPinPositionERKNSt6stringERKNSt6stringEP8point_2d"></span><span id="kicadPcbDataBase::getPinPosition__ssCR.ssCR.point_2dP"></span>bool <code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv416kicadPcbDataBase" title="kicadPcbDataBase">kicadPcbDataBase</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">getPinPosition</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>inst_name</em>, <em class="property">const</em> std::string &amp;<em>pin_name</em>, point_2d *<em>pos</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16kicadPcbDataBase14getPinPositionERKNSt6stringERKNSt6stringEP8point_2d" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N16kicadPcbDataBase14getPinPositionEKiRKiP8point_2d">
+<span id="_CPPv3N16kicadPcbDataBase14getPinPositionEKiRKiP8point_2d"></span><span id="_CPPv2N16kicadPcbDataBase14getPinPositionEKiRKiP8point_2d"></span><span id="kicadPcbDataBase::getPinPosition__iC.iCR.point_2dP"></span>bool <code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv416kicadPcbDataBase" title="kicadPcbDataBase">kicadPcbDataBase</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">getPinPosition</code><span class="sig-paren">(</span><em class="property">const</em> int <em>inst_id</em>, <em class="property">const</em> int &amp;<em>pin_id</em>, point_2d *<em>pos</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16kicadPcbDataBase14getPinPositionEKiRKiP8point_2d" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N16kicadPcbDataBase14getPinPositionERK8padstackRK8instanceP8point_2d">
+<span id="_CPPv3N16kicadPcbDataBase14getPinPositionERK8padstackRK8instanceP8point_2d"></span><span id="_CPPv2N16kicadPcbDataBase14getPinPositionERK8padstackRK8instanceP8point_2d"></span><span id="kicadPcbDataBase::getPinPosition__padstackCR.instanceCR.point_2dP"></span>void <code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv416kicadPcbDataBase" title="kicadPcbDataBase">kicadPcbDataBase</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">getPinPosition</code><span class="sig-paren">(</span><em class="property">const</em> padstack&amp;, <em class="property">const</em> instance&amp;, point_2d *<em>pos</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16kicadPcbDataBase14getPinPositionERK8padstackRK8instanceP8point_2d" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N16kicadPcbDataBase33getPinShapeRelativeCoordsToModuleERK8padstackRK8instanceRK9points_2dP9points_2d">
+<span id="_CPPv3N16kicadPcbDataBase33getPinShapeRelativeCoordsToModuleERK8padstackRK8instanceRK9points_2dP9points_2d"></span><span id="_CPPv2N16kicadPcbDataBase33getPinShapeRelativeCoordsToModuleERK8padstackRK8instanceRK9points_2dP9points_2d"></span><span id="kicadPcbDataBase::getPinShapeRelativeCoordsToModule__padstackCR.instanceCR.points_2dCR.points_2dP"></span>void <code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv416kicadPcbDataBase" title="kicadPcbDataBase">kicadPcbDataBase</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">getPinShapeRelativeCoordsToModule</code><span class="sig-paren">(</span><em class="property">const</em> padstack &amp;<em>pad</em>, <em class="property">const</em> instance &amp;<em>inst</em>, <em class="property">const</em> points_2d &amp;<em>coords</em>, points_2d *<em>coordsRe</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16kicadPcbDataBase33getPinShapeRelativeCoordsToModuleERK8padstackRK8instanceRK9points_2dP9points_2d" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N16kicadPcbDataBase14getPinPositionERK3PinP8point_2d">
+<span id="_CPPv3N16kicadPcbDataBase14getPinPositionERK3PinP8point_2d"></span><span id="_CPPv2N16kicadPcbDataBase14getPinPositionERK3PinP8point_2d"></span><span id="kicadPcbDataBase::getPinPosition__PinCR.point_2dP"></span>bool <code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv416kicadPcbDataBase" title="kicadPcbDataBase">kicadPcbDataBase</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">getPinPosition</code><span class="sig-paren">(</span><em class="property">const</em> Pin &amp;<em>p</em>, point_2d *<em>pos</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16kicadPcbDataBase14getPinPositionERK3PinP8point_2d" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N16kicadPcbDataBase11getCompBBoxEKiP8point_2d">
+<span id="_CPPv3N16kicadPcbDataBase11getCompBBoxEKiP8point_2d"></span><span id="_CPPv2N16kicadPcbDataBase11getCompBBoxEKiP8point_2d"></span><span id="kicadPcbDataBase::getCompBBox__iC.point_2dP"></span>bool <code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv416kicadPcbDataBase" title="kicadPcbDataBase">kicadPcbDataBase</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">getCompBBox</code><span class="sig-paren">(</span><em class="property">const</em> int <em>compId</em>, point_2d *<em>bBox</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16kicadPcbDataBase11getCompBBoxEKiP8point_2d" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N16kicadPcbDataBase11getPinLayerERKiRKi">
+<span id="_CPPv3N16kicadPcbDataBase11getPinLayerERKiRKi"></span><span id="_CPPv2N16kicadPcbDataBase11getPinLayerERKiRKi"></span><span id="kicadPcbDataBase::getPinLayer__iCR.iCR"></span>std::vector&lt;int&gt; <code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv416kicadPcbDataBase" title="kicadPcbDataBase">kicadPcbDataBase</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">getPinLayer</code><span class="sig-paren">(</span><em class="property">const</em> int &amp;<em>instId</em>, <em class="property">const</em> int &amp;<em>padStackId</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16kicadPcbDataBase11getPinLayerERKiRKi" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N16kicadPcbDataBase32getPadstackRotatedWidthAndHeightERK8instanceRK8padstackRdRd">
+<span id="_CPPv3N16kicadPcbDataBase32getPadstackRotatedWidthAndHeightERK8instanceRK8padstackRdRd"></span><span id="_CPPv2N16kicadPcbDataBase32getPadstackRotatedWidthAndHeightERK8instanceRK8padstackRdRd"></span><span id="kicadPcbDataBase::getPadstackRotatedWidthAndHeight__instanceCR.padstackCR.doubleR.doubleR"></span>void <code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv416kicadPcbDataBase" title="kicadPcbDataBase">kicadPcbDataBase</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">getPadstackRotatedWidthAndHeight</code><span class="sig-paren">(</span><em class="property">const</em> instance &amp;<em>inst</em>, <em class="property">const</em> padstack &amp;<em>pad</em>, double &amp;<em>width</em>, double &amp;<em>height</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16kicadPcbDataBase32getPadstackRotatedWidthAndHeightERK8instanceRK8padstackRdRd" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>// TODO:: Move this to instance or overloaded this to Instance</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N16kicadPcbDataBase11getInstanceERKNSt6stringERP8instance">
+<span id="_CPPv3N16kicadPcbDataBase11getInstanceERKNSt6stringERP8instance"></span><span id="_CPPv2N16kicadPcbDataBase11getInstanceERKNSt6stringERP8instance"></span><span id="kicadPcbDataBase::getInstance__ssCR.instancePR"></span>bool <code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv416kicadPcbDataBase" title="kicadPcbDataBase">kicadPcbDataBase</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">getInstance</code><span class="sig-paren">(</span><em class="property">const</em> std::string&amp;, instance*&amp;<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16kicadPcbDataBase11getInstanceERKNSt6stringERP8instance" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N16kicadPcbDataBase12getComponentERKNSt6stringERP9component">
+<span id="_CPPv3N16kicadPcbDataBase12getComponentERKNSt6stringERP9component"></span><span id="_CPPv2N16kicadPcbDataBase12getComponentERKNSt6stringERP9component"></span><span id="kicadPcbDataBase::getComponent__ssCR.componentPR"></span>bool <code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv416kicadPcbDataBase" title="kicadPcbDataBase">kicadPcbDataBase</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">getComponent</code><span class="sig-paren">(</span><em class="property">const</em> std::string&amp;, component*&amp;<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16kicadPcbDataBase12getComponentERKNSt6stringERP9component" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N16kicadPcbDataBase6getNetERKNSt6stringERP3net">
+<span id="_CPPv3N16kicadPcbDataBase6getNetERKNSt6stringERP3net"></span><span id="_CPPv2N16kicadPcbDataBase6getNetERKNSt6stringERP3net"></span><span id="kicadPcbDataBase::getNet__ssCR.netPR"></span>bool <code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv416kicadPcbDataBase" title="kicadPcbDataBase">kicadPcbDataBase</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">getNet</code><span class="sig-paren">(</span><em class="property">const</em> std::string&amp;, net*&amp;<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16kicadPcbDataBase6getNetERKNSt6stringERP3net" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N16kicadPcbDataBase12getComponentEKi">
+<span id="_CPPv3N16kicadPcbDataBase12getComponentEKi"></span><span id="_CPPv2N16kicadPcbDataBase12getComponentEKi"></span><span id="kicadPcbDataBase::getComponent__iC"></span>component &amp;<code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv416kicadPcbDataBase" title="kicadPcbDataBase">kicadPcbDataBase</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">getComponent</code><span class="sig-paren">(</span><em class="property">const</em> int <em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16kicadPcbDataBase12getComponentEKi" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N16kicadPcbDataBase11getInstanceEKi">
+<span id="_CPPv3N16kicadPcbDataBase11getInstanceEKi"></span><span id="_CPPv2N16kicadPcbDataBase11getInstanceEKi"></span><span id="kicadPcbDataBase::getInstance__iC"></span>instance &amp;<code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv416kicadPcbDataBase" title="kicadPcbDataBase">kicadPcbDataBase</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">getInstance</code><span class="sig-paren">(</span><em class="property">const</em> int <em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16kicadPcbDataBase11getInstanceEKi" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N16kicadPcbDataBase6getNetEKi">
+<span id="_CPPv3N16kicadPcbDataBase6getNetEKi"></span><span id="_CPPv2N16kicadPcbDataBase6getNetEKi"></span><span id="kicadPcbDataBase::getNet__iC"></span>net &amp;<code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv416kicadPcbDataBase" title="kicadPcbDataBase">kicadPcbDataBase</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">getNet</code><span class="sig-paren">(</span><em class="property">const</em> int <em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16kicadPcbDataBase6getNetEKi" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N16kicadPcbDataBase11getNetclassEKi">
+<span id="_CPPv3N16kicadPcbDataBase11getNetclassEKi"></span><span id="_CPPv2N16kicadPcbDataBase11getNetclassEKi"></span><span id="kicadPcbDataBase::getNetclass__iC"></span>netclass &amp;<code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv416kicadPcbDataBase" title="kicadPcbDataBase">kicadPcbDataBase</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">getNetclass</code><span class="sig-paren">(</span><em class="property">const</em> int <em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16kicadPcbDataBase11getNetclassEKi" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N16kicadPcbDataBase11getFileNameEv">
+<span id="_CPPv3N16kicadPcbDataBase11getFileNameEv"></span><span id="_CPPv2N16kicadPcbDataBase11getFileNameEv"></span><span id="kicadPcbDataBase::getFileName"></span>std::string <code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv416kicadPcbDataBase" title="kicadPcbDataBase">kicadPcbDataBase</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">getFileName</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16kicadPcbDataBase11getFileNameEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N16kicadPcbDataBase12getInstancesEv">
+<span id="_CPPv3N16kicadPcbDataBase12getInstancesEv"></span><span id="_CPPv2N16kicadPcbDataBase12getInstancesEv"></span><span id="kicadPcbDataBase::getInstances"></span>std::vector&lt;instance&gt; &amp;<code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv416kicadPcbDataBase" title="kicadPcbDataBase">kicadPcbDataBase</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">getInstances</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16kicadPcbDataBase12getInstancesEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N16kicadPcbDataBase13getComponentsEv">
+<span id="_CPPv3N16kicadPcbDataBase13getComponentsEv"></span><span id="_CPPv2N16kicadPcbDataBase13getComponentsEv"></span><span id="kicadPcbDataBase::getComponents"></span>std::vector&lt;component&gt; &amp;<code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv416kicadPcbDataBase" title="kicadPcbDataBase">kicadPcbDataBase</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">getComponents</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16kicadPcbDataBase13getComponentsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N16kicadPcbDataBase7getNetsEv">
+<span id="_CPPv3N16kicadPcbDataBase7getNetsEv"></span><span id="_CPPv2N16kicadPcbDataBase7getNetsEv"></span><span id="kicadPcbDataBase::getNets"></span>std::vector&lt;net&gt; &amp;<code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv416kicadPcbDataBase" title="kicadPcbDataBase">kicadPcbDataBase</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">getNets</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16kicadPcbDataBase7getNetsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N16kicadPcbDataBase18getUnconnectedPinsEv">
+<span id="_CPPv3N16kicadPcbDataBase18getUnconnectedPinsEv"></span><span id="_CPPv2N16kicadPcbDataBase18getUnconnectedPinsEv"></span><span id="kicadPcbDataBase::getUnconnectedPins"></span>std::vector&lt;Pin&gt; &amp;<code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv416kicadPcbDataBase" title="kicadPcbDataBase">kicadPcbDataBase</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">getUnconnectedPins</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16kicadPcbDataBase18getUnconnectedPinsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N16kicadPcbDataBase13getNetclassesEv">
+<span id="_CPPv3N16kicadPcbDataBase13getNetclassesEv"></span><span id="_CPPv2N16kicadPcbDataBase13getNetclassesEv"></span><span id="kicadPcbDataBase::getNetclasses"></span>std::vector&lt;netclass&gt; &amp;<code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv416kicadPcbDataBase" title="kicadPcbDataBase">kicadPcbDataBase</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">getNetclasses</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16kicadPcbDataBase13getNetclassesEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N16kicadPcbDataBase17getInstancesCountEv">
+<span id="_CPPv3N16kicadPcbDataBase17getInstancesCountEv"></span><span id="_CPPv2N16kicadPcbDataBase17getInstancesCountEv"></span><span id="kicadPcbDataBase::getInstancesCount"></span>int <code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv416kicadPcbDataBase" title="kicadPcbDataBase">kicadPcbDataBase</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">getInstancesCount</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16kicadPcbDataBase17getInstancesCountEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N16kicadPcbDataBase10getNumNetsEv">
+<span id="_CPPv3N16kicadPcbDataBase10getNumNetsEv"></span><span id="_CPPv2N16kicadPcbDataBase10getNumNetsEv"></span><span id="kicadPcbDataBase::getNumNets"></span>int <code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv416kicadPcbDataBase" title="kicadPcbDataBase">kicadPcbDataBase</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">getNumNets</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16kicadPcbDataBase10getNumNetsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N16kicadPcbDataBase19getLargestClearanceEv">
+<span id="_CPPv3N16kicadPcbDataBase19getLargestClearanceEv"></span><span id="_CPPv2N16kicadPcbDataBase19getLargestClearanceEv"></span><span id="kicadPcbDataBase::getLargestClearance"></span>double <code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv416kicadPcbDataBase" title="kicadPcbDataBase">kicadPcbDataBase</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">getLargestClearance</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16kicadPcbDataBase19getLargestClearanceEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N16kicadPcbDataBase18getNumCopperLayersEv">
+<span id="_CPPv3N16kicadPcbDataBase18getNumCopperLayersEv"></span><span id="_CPPv2N16kicadPcbDataBase18getNumCopperLayersEv"></span><span id="kicadPcbDataBase::getNumCopperLayers"></span>int <code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv416kicadPcbDataBase" title="kicadPcbDataBase">kicadPcbDataBase</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">getNumCopperLayers</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16kicadPcbDataBase18getNumCopperLayersEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N16kicadPcbDataBase10getLayerIdERKNSt6stringE">
+<span id="_CPPv3N16kicadPcbDataBase10getLayerIdERKNSt6stringE"></span><span id="_CPPv2N16kicadPcbDataBase10getLayerIdERKNSt6stringE"></span><span id="kicadPcbDataBase::getLayerId__ssCR"></span>int <code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv416kicadPcbDataBase" title="kicadPcbDataBase">kicadPcbDataBase</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">getLayerId</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>layerName</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16kicadPcbDataBase10getLayerIdERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N16kicadPcbDataBase15getCopperLayersEv">
+<span id="_CPPv3N16kicadPcbDataBase15getCopperLayersEv"></span><span id="_CPPv2N16kicadPcbDataBase15getCopperLayersEv"></span><span id="kicadPcbDataBase::getCopperLayers"></span>std::map&lt;int, std::string&gt; &amp;<code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv416kicadPcbDataBase" title="kicadPcbDataBase">kicadPcbDataBase</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">getCopperLayers</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16kicadPcbDataBase15getCopperLayersEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="testers">
+<h2>Testers<a class="headerlink" href="#testers" title="Permalink to this headline">¶</a></h2>
+<dl class="cpp function">
+<dt id="_CPPv4N16kicadPcbDataBase12isInstanceIdEKi">
+<span id="_CPPv3N16kicadPcbDataBase12isInstanceIdEKi"></span><span id="_CPPv2N16kicadPcbDataBase12isInstanceIdEKi"></span><span id="kicadPcbDataBase::isInstanceId__iC"></span>bool <code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv416kicadPcbDataBase" title="kicadPcbDataBase">kicadPcbDataBase</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">isInstanceId</code><span class="sig-paren">(</span><em class="property">const</em> int <em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16kicadPcbDataBase12isInstanceIdEKi" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N16kicadPcbDataBase13isComponentIdEKi">
+<span id="_CPPv3N16kicadPcbDataBase13isComponentIdEKi"></span><span id="_CPPv2N16kicadPcbDataBase13isComponentIdEKi"></span><span id="kicadPcbDataBase::isComponentId__iC"></span>bool <code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv416kicadPcbDataBase" title="kicadPcbDataBase">kicadPcbDataBase</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">isComponentId</code><span class="sig-paren">(</span><em class="property">const</em> int <em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16kicadPcbDataBase13isComponentIdEKi" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N16kicadPcbDataBase7isNetIdEKi">
+<span id="_CPPv3N16kicadPcbDataBase7isNetIdEKi"></span><span id="_CPPv2N16kicadPcbDataBase7isNetIdEKi"></span><span id="kicadPcbDataBase::isNetId__iC"></span>bool <code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv416kicadPcbDataBase" title="kicadPcbDataBase">kicadPcbDataBase</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">isNetId</code><span class="sig-paren">(</span><em class="property">const</em> int <em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16kicadPcbDataBase7isNetIdEKi" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N16kicadPcbDataBase12isNetclassIdEKi">
+<span id="_CPPv3N16kicadPcbDataBase12isNetclassIdEKi"></span><span id="_CPPv2N16kicadPcbDataBase12isNetclassIdEKi"></span><span id="kicadPcbDataBase::isNetclassId__iC"></span>bool <code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv416kicadPcbDataBase" title="kicadPcbDataBase">kicadPcbDataBase</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">isNetclassId</code><span class="sig-paren">(</span><em class="property">const</em> int <em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16kicadPcbDataBase12isNetclassIdEKi" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>// TODO: All layers are copper in the “layer_to_index_map” and “index_to_layer_map”</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N16kicadPcbDataBase12getLayerNameEKi">
+<span id="_CPPv3N16kicadPcbDataBase12getLayerNameEKi"></span><span id="_CPPv2N16kicadPcbDataBase12getLayerNameEKi"></span><span id="kicadPcbDataBase::getLayerName__iC"></span>std::string <code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv416kicadPcbDataBase" title="kicadPcbDataBase">kicadPcbDataBase</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">getLayerName</code><span class="sig-paren">(</span><em class="property">const</em> int <em>layerId</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16kicadPcbDataBase12getLayerNameEKi" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N16kicadPcbDataBase13isCopperLayerEKi">
+<span id="_CPPv3N16kicadPcbDataBase13isCopperLayerEKi"></span><span id="_CPPv2N16kicadPcbDataBase13isCopperLayerEKi"></span><span id="kicadPcbDataBase::isCopperLayer__iC"></span>bool <code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv416kicadPcbDataBase" title="kicadPcbDataBase">kicadPcbDataBase</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">isCopperLayer</code><span class="sig-paren">(</span><em class="property">const</em> int<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16kicadPcbDataBase13isCopperLayerEKi" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N16kicadPcbDataBase13isCopperLayerERKNSt6stringE">
+<span id="_CPPv3N16kicadPcbDataBase13isCopperLayerERKNSt6stringE"></span><span id="_CPPv2N16kicadPcbDataBase13isCopperLayerERKNSt6stringE"></span><span id="kicadPcbDataBase::isCopperLayer__ssCR"></span>bool <code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv416kicadPcbDataBase" title="kicadPcbDataBase">kicadPcbDataBase</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">isCopperLayer</code><span class="sig-paren">(</span><em class="property">const</em> std::string&amp;<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16kicadPcbDataBase13isCopperLayerERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>// TODO: Get design boundary based on rotated pin shape</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N16kicadPcbDataBase13testInstAngleEv">
+<span id="_CPPv3N16kicadPcbDataBase13testInstAngleEv"></span><span id="_CPPv2N16kicadPcbDataBase13testInstAngleEv"></span><span id="kicadPcbDataBase::testInstAngle"></span>void <code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv416kicadPcbDataBase" title="kicadPcbDataBase">kicadPcbDataBase</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">testInstAngle</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16kicadPcbDataBase13testInstAngleEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="drc">
+<h2>DRC<a class="headerlink" href="#drc" title="Permalink to this headline">¶</a></h2>
+<dl class="cpp function">
+<dt id="_CPPv4N16kicadPcbDataBase17printClearanceDrcEv">
+<span id="_CPPv3N16kicadPcbDataBase17printClearanceDrcEv"></span><span id="_CPPv2N16kicadPcbDataBase17printClearanceDrcEv"></span><span id="kicadPcbDataBase::printClearanceDrc"></span>void <code class="sig-prename descclassname"><a class="reference internal" href="#_CPPv416kicadPcbDataBase" title="kicadPcbDataBase">kicadPcbDataBase</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">printClearanceDrc</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16kicadPcbDataBase17printClearanceDrcEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">PCB-Layout-Framework</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quick Start</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">API for Database</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#initialization">Initialization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#print-helpers">Print Helpers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#getters">Getters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#testers">Testers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#drc">DRC</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="placer.html">API for Placer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="router.html">API for Router</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="quickstart.html" title="previous chapter">Quick Start</a></li>
+      <li>Next: <a href="placer.html" title="next chapter">API for Placer</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, [blinded for review].
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.1.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/database.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

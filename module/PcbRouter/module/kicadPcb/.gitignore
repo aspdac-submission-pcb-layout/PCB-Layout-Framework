@@ -1,0 +1,70 @@
+# Swig files
+*kicadparser-stamp/
+*tmp/
+
+# OSX system file
+.DS_Store
+
+# VS Code directory
+.vscode/
+
+# Binary, testcases and test output
+bin/
+lib/
+build/
+# cases/
+*.output
+
+# CMake and make files
+Makefile
+CMakeCache.txt
+*.cmake
+CMakeFiles
+install_manifest.txt
+
+# SWIG machine code
+*_wrapper.cpp
+*.py
+
+# Display File and KiCad files
+*.view
+*.pro
+*fp-info-cache
+*autosave*.kicad_pcb
+*.kicad_pcb-bak
+
+# Backup files
+*.bk
+
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app

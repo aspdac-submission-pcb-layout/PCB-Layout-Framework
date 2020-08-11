@@ -1,0 +1,75 @@
+# swig files
+*pcbrouter-stamp/
+
+# OSX system file
+.DS_Store
+
+# VS Code directory
+.vscode/
+
+# Binary, testcases and test output
+bin/
+lib/
+tmp/
+cases/
+build/
+output/
+log/
+PCBBenchmarks/
+test*/
+*.output
+*.plt
+*.dat
+*.py
+output.*
+*.log
+
+# CMake and make files
+Makefile
+CMakeCache.txt
+*.cmake
+CMakeFiles
+install_manifest.txt
+
+# SWIG machine code
+*_wrapper.cpp
+
+# KiCad related
+fp-info-cache
+*.pro
+
+# Backup files
+*.bk
+
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app

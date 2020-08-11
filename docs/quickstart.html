@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Start &#8212; PCB-Layout-Framework  documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="API for Database" href="database.html" />
+    <link rel="prev" title="Welcome to PCB-Layout-Framework’s documentation!" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="quick-start">
+<h1>Quick Start<a class="headerlink" href="#quick-start" title="Permalink to this headline">¶</a></h1>
+<p>This is the quick start guide for Ubuntu 18.04.
+Ubuntu 20.04 is likely the same, but has not been tested.
+Ubuntu 16.04 is not compatible because it is difficult to get the latest version of Python 3.</p>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p>Clone the repo.</p>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/aspdac-submission-pcb-layout/PCB-Layout-Framework.git</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">cd</span></code> into the repo.</p>
+<p><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">PCB-Layout-Framework</span></code></p>
+<p>Install basic dependencies as root.</p>
+<p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">./basic_dependencies.sh</span></code></p>
+<p>Build the tools.</p>
+<p><code class="docutils literal notranslate"><span class="pre">./ubuntu_install.sh</span></code></p>
+</div>
+<div class="section" id="test-installation">
+<h2>Test Installation<a class="headerlink" href="#test-installation" title="Permalink to this headline">¶</a></h2>
+<p>Run the regression tests.</p>
+<p><code class="docutils literal notranslate"><span class="pre">./tests/regression-py.sh</span></code></p>
+<p>The output should end with something like this:</p>
+<p><code class="docutils literal notranslate"><span class="pre">printKiCad()</span> <span class="pre">outputFileName:</span> <span class="pre">output.placement_test_full_mix.kicad_pcb</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">Placement</span> <span class="pre">finished</span> <span class="pre">in</span> <span class="pre">4.1495702266693115</span> <span class="pre">seconds</span> <span class="pre">(tests/placement_test_full_mix.kicad_pcb)</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">Routing</span> <span class="pre">finished</span> <span class="pre">in</span> <span class="pre">12.903456449508667</span> <span class="pre">seconds</span> <span class="pre">(tests/placement_test_full_mix.kicad_pcb,</span> <span class="pre">20</span> <span class="pre">iteration)</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">Success</span></code></p>
+</div>
+<div class="section" id="run-the-tools">
+<h2>Run the Tools<a class="headerlink" href="#run-the-tools" title="Permalink to this headline">¶</a></h2>
+<p>Things to note when running the tools:</p>
+<ol class="arabic simple">
+<li><p>You must have a board outline in the <code class="docutils literal notranslate"><span class="pre">Edge.Cuts</span></code> layer.</p></li>
+<li><p>You must have component outlines in the <code class="docutils literal notranslate"><span class="pre">CrtYd.F</span></code> layer at minimum. For through-hole components you also need a <code class="docutils literal notranslate"><span class="pre">CrtYd.B</span></code> outline.</p></li>
+<li><p>The default values in <code class="docutils literal notranslate"><span class="pre">run_layout.py</span></code> give a quick result for testing. Most designs need many more iterations to achieve anything like an acceptable result.</p></li>
+<li><p>For large designs (hundreds of components) expect run times greater than 10 hours. BeagleBone Black has over 400 components and takes around 12 hours to get a DRV-free result.</p></li>
+<li><p>Placement is harder than routing. The router is generally very good if the placement is workable. For best results, run several layout jobs in parallel, with different placement parameters for tuning.</p></li>
+<li><p>DRC is experimental. The KiCad DRC is more mature.</p></li>
+</ol>
+<p>To run a layout use the Python script <code class="docutils literal notranslate"><span class="pre">run_layout.py</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">run_layout.py</span> <span class="pre">&lt;your</span> <span class="pre">kicad_pcb</span> <span class="pre">file&gt;</span></code></p>
+<p>The result will be in a file with the same filename prefixed with <code class="docutils literal notranslate"><span class="pre">output.</span></code>.</p>
+<p>Playing with <code class="docutils literal notranslate"><span class="pre">run_layout.py</span></code>’s options can yield significantly better results.</p>
+<p>See the options with <code class="docutils literal notranslate"><span class="pre">run_layout.py</span> <span class="pre">--help</span></code>.</p>
+</div>
+<div class="section" id="make-your-own-tools">
+<h2>Make Your Own Tools<a class="headerlink" href="#make-your-own-tools" title="Permalink to this headline">¶</a></h2>
+<p>The API calls in this documentation work in Python.</p>
+<p>Examine <code class="docutils literal notranslate"><span class="pre">run_layout.py</span></code> as an example of how to call the placer, router, and so on, in Python.</p>
+<p>Each sub-module repository (the placer, router, and database) can be used as an example for how to integrate a new C++ tool.
+Generally you can copy the CMake files. Just make sure to update the <code class="docutils literal notranslate"><span class="pre">.i</span></code> files for the function calls you want to use in Python.</p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">PCB-Layout-Framework</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Quick Start</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#test-installation">Test Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#run-the-tools">Run the Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#make-your-own-tools">Make Your Own Tools</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="database.html">API for Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="placer.html">API for Placer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="router.html">API for Router</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Welcome to PCB-Layout-Framework’s documentation!</a></li>
+      <li>Next: <a href="database.html" title="next chapter">API for Database</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, [blinded for review].
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.1.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/quickstart.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

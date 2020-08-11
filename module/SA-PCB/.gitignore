@@ -1,0 +1,15 @@
+__pycache__
+src/pcbplacer-stamp/
+lib/*
+src/*.o
+bin/*
+build/*
+bin_backup/*
+bin/cache/*
+bin/annealer
+designs/*
+reports/*
+tmp/
+boost/
+taskflow/
+annealer
